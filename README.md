@@ -18,11 +18,11 @@ Run the following command to download, patch, compile coreutils and generate the
 
 Bash:
 ```
-curl https://raw.githubusercontent.com/jarun/advcpmv/master/install.sh --create-dirs -o ./advcpmv/install.sh && (cd advcpmv && sh install.sh)
+curl https://raw.githubusercontent.com/jarun/chukfinley/master/install.sh --create-dirs -o ./advcpmv/install.sh && (cd advcpmv && sh install.sh)
 ```
 Fish:
 ```
-curl https://raw.githubusercontent.com/jarun/advcpmv/master/install.sh --create-dirs -o ./advcpmv/install.sh; and begin; cd advcpmv; and sh install.sh; end
+curl https://raw.githubusercontent.com/chukfinley/advcpmv/master/install.sh --create-dirs -o ./advcpmv/install.sh; and begin; cd advcpmv; and sh install.sh; end
 ```
 
 To install an older version than the latest one, you can specify the version by passing it as an argument to the install script (at the end of the command, before the closing parenthesis). For example, if you want to install `advcpmv-0.8-8.32.patch` you would modify the command above like so.
