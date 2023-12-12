@@ -17,4 +17,7 @@ rm coreutils-$CORE_UTILS_VERSION.tar.xz
     /usr/bin/env cp ./src/cp /usr/bin/advcp
     /usr/bin/env cp ./src/mv /usr/bin/advmv
 )
-rm -rf coreutils-$CORE_UTILS_VERSION
+cd ..
+
+rm -rf advcpmv
+echo done
