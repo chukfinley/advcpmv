@@ -14,7 +14,7 @@ rm coreutils-$CORE_UTILS_VERSION.tar.xz
     patch -p1 -i advcpmv-$ADVCPMV_VERSION-$CORE_UTILS_VERSION.patch
     ./configure
     make
-    cp ./src/cp ../advcp
-    cp ./src/mv ../advmv
+    /usr/bin/env cp ./src/cp /usr/bin/advcp
+    /usr/bin/env cp ./src/mv /usr/bin/advmv
 )
 rm -rf coreutils-$CORE_UTILS_VERSION
