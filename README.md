@@ -18,7 +18,7 @@ Run the following command to download, patch, compile coreutils and generate the
 
 Bash:
 ```
-curl https://raw.githubusercontent.com/jarun/chukfinley/master/install.sh --create-dirs -o ./advcpmv/install.sh && (cd advcpmv && sh install.sh)
+curl https://raw.githubusercontent.com/chukfinley/advcpmv/master/install.sh --create-dirs -o ./advcpmv/install.sh && (cd advcpmv && sh install.sh)
 ```
 Fish:
 ```
