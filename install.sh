@@ -19,5 +19,6 @@ rm coreutils-$CORE_UTILS_VERSION.tar.xz
 )
 cd ..
 
-rm -rf advcpmv
+rm -rf ~/advcpmv
+rm -rf ~/coreutils-9.3
 echo done
