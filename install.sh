@@ -1,25 +1,14 @@
-#!/bin/sh
-
-set -e
-
-ADVCPMV_VERSION=${1:-0.9}
-CORE_UTILS_VERSION=${2:-9.3}
-
-curl -LO http://ftp.gnu.org/gnu/coreutils/coreutils-$CORE_UTILS_VERSION.tar.xz
-tar xvJf coreutils-$CORE_UTILS_VERSION.tar.xz
-rm coreutils-$CORE_UTILS_VERSION.tar.xz
-(
-    cd coreutils-$CORE_UTILS_VERSION/
-    curl -LO https://raw.githubusercontent.com/jarun/advcpmv/master/advcpmv-$ADVCPMV_VERSION-$CORE_UTILS_VERSION.patch
-    patch -p1 -i advcpmv-$ADVCPMV_VERSION-$CORE_UTILS_VERSION.patch
-    export FORCE_UNSAFE_CONFIGURE=1
-    ./configure
-    make
-    sudo /usr/bin/env cp ./src/cp /usr/bin/advcp
-    sudo /usr/bin/env cp ./src/mv /usr/bin/advmv
-)
+curl -LO http://ftp.gnu.org/gnu/coreutils/coreutils-9.4.tar.xz
+tar xvJf coreutils-9.4.tar.xz
+rm coreutils-9.4.tar.xz
+cd coreutils-9.4/
+curl -LO https://raw.githubusercontent.com/chukfinley/advcpmv/master/advcpmv-0.9-9.4.patch
+patch -p1 -i advcpmv-0.9-9.4.patch
+export FORCE_UNSAFE_CONFIGURE=1
+./configure
+make
+sudo /usr/bin/env cp ./src/cp /usr/bin/advcp
+sudo /usr/bin/env cp ./src/mv /usr/bin/advmv
 cd ..
-
-rm -rf ~/advcpmv
-rm -rf ~/coreutils-9.3
+rm -rf coreutils-9.4
 echo done
